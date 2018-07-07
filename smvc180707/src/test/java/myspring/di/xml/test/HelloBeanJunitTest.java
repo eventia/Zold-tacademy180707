@@ -13,7 +13,6 @@ import myspring.di.xml.Printer;
 
 public class HelloBeanJunitTest {
 
-	
 	ApplicationContext context ;
 
 	@Before

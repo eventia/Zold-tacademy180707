@@ -1,4 +1,4 @@
-package myspring.di.xml;
+package com.wind.myweb;
 
 import java.text.DateFormat;
 import java.util.Date;

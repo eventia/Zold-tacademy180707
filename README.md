@@ -1,1 +1,2 @@
-# tacademy180707
+# Simple Project for Spring Lecture
+- tacademy180707

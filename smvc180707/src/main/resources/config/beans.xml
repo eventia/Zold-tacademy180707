@@ -9,7 +9,7 @@
 		
 	<aop:config>
 		<aop:aspect id="traceAspect"   ref="performanceTraceAdvice"> 
-			<aop:around  pointcut="execution(public * myspring.user.service..*(..))" method="trace" />
+			<aop:around  pointcut="execution(public * com.wind.myweb.service..*(..))" method="trace" />
 		</aop:aspect>
 	</aop:config>
 	
@@ -17,7 +17,7 @@
 	<bean id="performanceTraceAdvice" class="myspring.aop.xml.PerformanceTraceAdvice" />
 
 	<!-- component scan 설정 -->
-	<context:component-scan base-package="myspring.user" />
+	<context:component-scan base-package="com.wind.myweb" />
 	
 	<context:property-placeholder location="classpath:config/value.properties"/>
 

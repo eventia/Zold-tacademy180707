@@ -45,11 +45,11 @@ public class UserClient {
 	}
 
 	@Test
-	@Ignore
+//	@Ignore
 	public void getUserTest() {
 		UserVO user = service.getUser("gildong");
 		System.out.println(user);
-		assertEquals("ȫ�浿", user.getName());
+		assertEquals("홍길동", user.getName());
 	}
 
 	@Test

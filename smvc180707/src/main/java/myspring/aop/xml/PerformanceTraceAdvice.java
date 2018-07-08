@@ -3,20 +3,20 @@ import org.aspectj.lang.ProceedingJoinPoint;
 
 public class PerformanceTraceAdvice {
 	public Object trace(ProceedingJoinPoint joinPoint) throws Throwable {
-		//Å¸°Ù ¸Ş¼­µåÀÇ signature Á¤º¸
+		//íƒ€ê²Ÿ ë©”ì„œë“œì˜ signature ì •ë³´
 		String signatureString = joinPoint.getSignature().toShortString();		
-		System.out.println(signatureString + " ½ÃÀÛ");
-		//Å¸°ÙÀÇ ¸Ş¼­µå°¡ È£ÃâµÇ±â ÀüÀÇ ½Ã°£ 
+		System.out.println(signatureString + " ì‹œì‘");
+		//íƒ€ê²Ÿì˜ ë©”ì„œë“œê°€ í˜¸ì¶œë˜ê¸° ì „ì˜ ì‹œê°„ 
 		long start = System.currentTimeMillis();		
 		try {
-			//Å¸°ÙÀÇ ¸Ş¼­µå È£Ãâ
+			//íƒ€ê²Ÿì˜ ë©”ì„œë“œ í˜¸ì¶œ
 			Object result = joinPoint.proceed();
 			return result;
 		} finally {
-			//Å¸°ÙÀÇ ¸Ş¼­µå°¡ È£ÃâµÈ ÈÄÀÇ ½Ã°£
+			//íƒ€ê²Ÿì˜ ë©”ì„œë“œê°€ í˜¸ì¶œëœ í›„ì˜ ì‹œê°„
 			long finish = System.currentTimeMillis();
-			System.out.println(signatureString + " Á¾·á");
-			System.out.println(signatureString + " ½ÇÇà ½Ã°£ : " + 
+			System.out.println(signatureString + " ì¢…ë£Œ");
+			System.out.println(signatureString + " ì‹¤í–‰ ì‹œê°„ : " + 
 			   (finish - start) + " ms");
 		}
 	}
